@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDLINE MOTORS | Premium Cars</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#" class="logo"><span>R</span> REDLINE <small>MOTORS</small></a>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#inventory">Buy Cars</a>
+        <a href="#sell">Sell Cars</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <a href="#inventory" class="nav-btn">Explore Cars ↗</a>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tag">PREMIUM AUTOMOTIVE EXPERIENCE</span>
+        <h1>FIND YOUR<br><span>NEXT DRIVE.</span></h1>
+        <p>Discover premium cars. Experience luxury, power and performance with REDLINE MOTORS.</p>
+        <a href="#inventory" class="primary-btn">Explore Collection ↗</a>
+        <div class="stats">
+            <div><h2>500+</h2><p>Premium Cars</p></div>
+            <div><h2>100%</h2><p>Verified Listings</p></div>
+            <div><h2>24/7</h2><p>Support</p></div>
+        </div>
+    </div>
+    <div class="hero-image">
+        <div class="image-caption">PURE PERFORMANCE <span>01 / 03</span></div>
+    </div>
+</section>
+
+<section class="inventory" id="inventory">
+    <div class="section-title">
+        <span class="tag">OUR COLLECTION</span>
+        <h2>EXPLORE <span>THE GARAGE.</span></h2>
+        <p>Find the perfect machine for your lifestyle.</p>
+    </div>
+
+    <div class="filters">
+        <input type="search" id="search" placeholder="Search your dream car...">
+
+        <select id="brand">
+            <option value="">All Brands</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Audi">Audi</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Tesla">Tesla</option>
+        </select>
+
+        <select id="fuel">
+            <option value="">All Fuel Types</option>
+            <option value="Petrol">Petrol</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Electric">Electric</option>
+        </select>
+
+        <select id="sort">
+            <option value="">Sort By</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+        </select>
+    </div>
+
+    <div class="car-grid" id="carGrid"></div>
+    <p id="noResults" class="no-results" hidden>No cars found. Try another search.</p>
+</section>
+
+<section class="sell-section" id="sell">
+    <div>
+        <span class="tag">SELL YOUR VEHICLE</span>
+        <h2>YOUR CAR.<br><span>YOUR PRICE.</span></h2>
+        <p>Want to sell your car? Send us your details and our team will contact you.</p>
+    </div>
+
+    <form id="sellForm">
+        <input type="text" id="sellerName" placeholder="Your Name" required>
+        <input type="tel" id="sellerPhone" placeholder="Phone Number" pattern="[0-9+\-\s]{10,15}" required>
+        <input type="text" id="sellerCar" placeholder="Car Model" required>
+        <input type="number" id="sellerYear" placeholder="Manufacturing Year" min="1990" max="2026" required>
+        <button type="submit" class="primary-btn">Submit Enquiry ↗</button>
+        <p id="formMessage"></p>
+    </form>
+</section>
+
+<section class="about" id="about">
+    <span class="tag">WHY REDLINE MOTORS?</span>
+    <h2>DRIVE WITH <span>CONFIDENCE.</span></h2>
+    <div class="about-grid">
+        <div><h3>01 / VERIFIED</h3><p>Detailed vehicle listings and transparent information.</p></div>
+        <div><h3>02 / PREMIUM</h3><p>A curated collection of premium automobiles.</p></div>
+        <div><h3>03 / SIMPLE</h3><p>Search, compare and enquire with ease.</p></div>
+    </div>
+</section>
+
+<footer>
+    <a href="#" class="logo"><span>R</span> REDLINE <small>MOTORS</small></a>
+    <p>BUILT FOR THE LOVE OF DRIVING.</p>
+    <p>© 2026 REDLINE MOTORS</p>
+</footer>
+
+<!-- Car details modal -->
+<div class="modal" id="carModal">
+    <div class="modal-box">
+        <button id="closeModal" class="close-btn">×</button>
+        <div id="modalContent"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
